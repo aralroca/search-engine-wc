@@ -59,6 +59,7 @@ export default async function SearchEngineWC(
       if (result) {
         event.preventDefault();
         isExpanded.value = false;
+        document.body.style.overflow = "auto";
         navigate(result.id);
       }
       return;
