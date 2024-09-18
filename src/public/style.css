@@ -13,12 +13,17 @@ body {
 }
 
 header {
-  background-image: linear-gradient(to right, rgb(96, 156, 106), rgb(35, 113, 4));
+  background-image: linear-gradient(
+    to right,
+    rgb(96, 156, 106),
+    rgb(35, 113, 4)
+  );
   position: fixed;
   max-width: 100vw;
   gap: 20px;
   display: flex;
   align-items: center;
+  max-width: 100%;
   justify-content: flex-start;
   height: 70px;
   color: #fff;

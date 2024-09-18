@@ -1,3 +1,5 @@
+import GitHubIcon from "./gh-icon";
+
 export default function Layout({ children }: { children: JSX.Element }) {
   return (
     <html lang="en">
@@ -25,7 +27,16 @@ export default function Layout({ children }: { children: JSX.Element }) {
             <search-engine-wc skipSSR jsonUrl="/demo.json" />
           </div>
         </header>
-        <main>{children}</main>
+        <main>
+          <a
+            href="https://github.com/aralroca/search-engine-wc"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <GitHubIcon size={50} />
+          </a>
+          {children}
+        </main>
       </body>
     </html>
   );
