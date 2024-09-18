@@ -22,7 +22,7 @@
 
 This Web Component allows you to have a **search engine** similar to **Vitepress** easily in any framework _(React, Brisa, Vue, Solid.js, Svelte, Vanilla JS, etc)_.
 
-It works with:
+Includes:
 
 - [**MiniSearch**](https://lucaong.github.io/minisearch/)
 - [**Mark.js**](https://markjs.io/)
