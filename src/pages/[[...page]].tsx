@@ -39,3 +39,10 @@ export default async function Homepage(
     </>
   );
 }
+
+export function prerender() {
+  const home = { page: [] };
+  return [home,...demo.map((item: any) => ({
+    page: item.id.replace(/#.*/g, '').split("/").filter(Boolean),
+  }))];
+}
