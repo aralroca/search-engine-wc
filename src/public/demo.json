@@ -1,0 +1,74 @@
+[
+  {
+    "id": "/blog/introduction#what-is-this-blog",
+    "title": "Introduction",
+    "text": "Welcome to the blog! In this section, we explain what this blog is about...",
+    "titles": ["Introduction", "What is this blog?"]
+  },
+  {
+    "id": "/blog/introduction#why-start-blogging",
+    "title": "Why Start Blogging",
+    "text": "Blogging is a powerful way to share ideas...",
+    "titles": ["Introduction", "Why Start Blogging"]
+  },
+  {
+    "id": "/blog/web-development#frontend-vs-backend",
+    "title": "Frontend vs Backend",
+    "text": "In web development, there are two main parts: frontend and backend...",
+    "titles": ["Web Development", "Frontend vs Backend"]
+  },
+  {
+    "id": "/blog/web-development#css-tricks",
+    "title": "CSS Tricks",
+    "text": "Here are some advanced CSS tricks that will help you in your projects...",
+    "titles": ["Web Development", "CSS Tricks"]
+  },
+  {
+    "id": "/blog/javascript-basics#variables-and-scope",
+    "title": "Variables and Scope",
+    "text": "Understanding variables and scope is fundamental to JavaScript...",
+    "titles": ["JavaScript Basics", "Variables and Scope"]
+  },
+  {
+    "id": "/blog/javascript-basics#arrow-functions",
+    "title": "Arrow Functions",
+    "text": "Arrow functions are a shorter way to write functions in JavaScript...",
+    "titles": ["JavaScript Basics", "Arrow Functions"]
+  },
+  {
+    "id": "/blog/css-grid#layout-with-css-grid",
+    "title": "Layout with CSS Grid",
+    "text": "CSS Grid is a powerful tool for creating two-dimensional layouts...",
+    "titles": ["CSS Grid", "Layout with CSS Grid"]
+  },
+  {
+    "id": "/blog/css-grid#responsive-design",
+    "title": "Responsive Design",
+    "text": "Designing responsive layouts is key in modern web development...",
+    "titles": ["CSS Grid", "Responsive Design"]
+  },
+  {
+    "id": "/blog/seo#on-page-seo",
+    "title": "On-Page SEO",
+    "text": "Optimizing your website's content is crucial for on-page SEO...",
+    "titles": ["SEO", "On-Page SEO"]
+  },
+  {
+    "id": "/blog/seo#technical-seo",
+    "title": "Technical SEO",
+    "text": "Technical SEO involves optimizing the infrastructure of your site...",
+    "titles": ["SEO", "Technical SEO"]
+  },
+  {
+    "id": "/blog/advanced-javascript#promises-and-async-await",
+    "title": "Promises and Async/Await",
+    "text": "Promises and async/await simplify asynchronous programming in JavaScript...",
+    "titles": ["Advanced JavaScript", "Promises and Async/Await"]
+  },
+  {
+    "id": "/blog/advanced-javascript#closures",
+    "title": "Closures",
+    "text": "Closures are a key concept in JavaScript that allow functions to access variables...",
+    "titles": ["Advanced JavaScript", "Closures"]
+  }
+]

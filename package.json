@@ -1,0 +1,61 @@
+{
+  "name": "search-engine-wc",
+  "version": "0.1.0",
+  "module": "dist/search-engine-wc.client.js",
+  "type": "module",
+  "main": "./dist/search-engine-wc.client.js",
+  "types": "./index.d.ts",
+  "description": "Web component to search content in different pages",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aralroca/search-engine-wc.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Aral Roca Gòmez",
+    "email": "contact@aralroca.com"
+  },
+  "scripts": {
+    "dev": "brisa dev",
+    "dev:debug": "brisa dev --debug",
+    "build": "brisa build -w src/web-components/search-engine-wc.tsx && mv build dist && brisa build",
+    "start": "brisa start"
+  },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/search-engine-wc.client.js",
+      "require": "./dist/search-engine-wc.client.js",
+      "bun": "./dist/search-engine-wc.client.js",
+      "node": "./dist/search-engine-wc.client.js"
+    },
+    "./server": {
+      "import": "./dist/search-engine-wc.server.js",
+      "require": "./dist/search-engine-wc.server.js",
+      "bun": "./dist/search-engine-wc.server.js",
+      "node": "./dist/search-engine-wc.server.js"
+    },
+    "./types": {
+      "import": "./index.d.ts",
+      "require": "./index.d.ts",
+      "bun": "./index.d.ts",
+      "node": "./index.d.ts"
+    }
+  },
+  "dependencies": {
+    "brisa": "0.0.217",
+    "brisa-adapter-vercel": "0.0.217",
+    "mark.js": "8.11.1",
+    "minisearch": "7.1.0"
+  },
+  "devDependencies": {
+    "@types/bun": "1.1.9",
+    "typescript": "5.6.2",
+    "markdown-it": "14.1.0",
+    "markdown-it-shikiji": "0.10.2",
+    "@types/markdown-it": "14.1.2"
+  }
+}
