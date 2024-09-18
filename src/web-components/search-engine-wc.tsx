@@ -58,6 +58,7 @@ export default async function SearchEngineWC(
       const result = searchResults.value[selected.value];
       if (result) {
         event.preventDefault();
+        isExpanded.value = false;
         navigate(result.id);
       }
       return;

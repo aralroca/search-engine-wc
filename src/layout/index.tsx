@@ -22,7 +22,7 @@ export default function Layout({ children }: { children: JSX.Element }) {
         <header>
           <h1>Search Engine WC</h1>
           <div style={{ height: "70px", marginTop: "33px" }}>
-            <search-engine-wc jsonUrl="/demo.json" />
+            <search-engine-wc skipSSR jsonUrl="/demo.json" />
           </div>
         </header>
         <main>{children}</main>
