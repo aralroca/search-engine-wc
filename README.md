@@ -13,7 +13,7 @@
 </a>
 
 
-[![npm version](https://badge.fury.io/js/brisa.svg)](https://badge.fury.io/js/search-engine-wc)
+[![npm version](https://badge.fury.io/js/search-engine-wc.svg)](https://badge.fury.io/js/search-engine-wc)
 ![npm](https://img.shields.io/npm/dw/search-engine-wc)
 [![size](https://img.shields.io/bundlephobia/minzip/search-engine-wc)](https://bundlephobia.com/package/brisa)
 
