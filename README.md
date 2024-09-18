@@ -18,6 +18,11 @@ It works with:
 - [**Signals**](https://github.com/tc39/proposal-signals)
 - [**Declarative Shadow DOM**](https://web.dev/articles/declarative-shadow-dom) (You can do SSR of it without problems)
 
+## [🔗 Demo](https://search-engine-wc.vercel.app/)
+
+<img width="800" height="404" src="demo.gif" />
+
+
 ## Getting Started
 
 ### In any framework except Brisa
