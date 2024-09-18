@@ -1,4 +1,4 @@
-# `search-engine-wc`
+# `<search-engine-wc />`
 
 <div align="center">
 
