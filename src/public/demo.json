@@ -70,5 +70,71 @@
     "title": "Closures",
     "text": "Closures are a key concept in JavaScript that allow functions to access variables...",
     "titles": ["Advanced JavaScript", "Closures"]
+  },
+  {
+    "id": "/blog/typescript#typescript-basics",
+    "title": "TypeScript Basics",
+    "text": "TypeScript is a superset of JavaScript that adds static typing...",
+    "titles": ["TypeScript", "TypeScript Basics"]
+  },
+  {
+    "id": "/blog/typescript#interfaces-and-types",
+    "title": "Interfaces and Types",
+    "text": "Interfaces and types help define the shape of data in TypeScript...",
+    "titles": ["TypeScript", "Interfaces and Types"]
+  },
+  {
+    "id": "/blog/react#react-components",
+    "title": "React Components",
+    "text": "Components are the building blocks of React applications...",
+    "titles": ["React", "React Components"]
+  },
+  {
+    "id": "/blog/react#state-and-props",
+    "title": "State and Props",
+    "text": "State and props are two fundamental concepts in React...",
+    "titles": ["React", "State and Props"]
+  },
+  {
+    "id": "/blog/react#hooks",
+    "title": "Hooks",
+    "text": "Hooks are a new addition in React that let you use state and other features...",
+    "titles": ["React", "Hooks"]
+  },
+  {
+    "id": "/blog/redux#redux-basics",
+    "title": "Redux Basics",
+    "text": "Redux is a state management library for JavaScript applications...",
+    "titles": ["Redux", "Redux Basics"]
+  },
+  {
+    "id": "/blog/redux#actions-and-reducers",
+    "title": "Actions and Reducers",
+    "text": "Actions and reducers are the building blocks of Redux applications...",
+    "titles": ["Redux", "Actions and Reducers"]
+  },
+  {
+    "id": "/blog/redux#middleware",
+    "title": "Middleware",
+    "text": "Middleware in Redux provides a third-party extension point...",
+    "titles": ["Redux", "Middleware"]
+  },
+  {
+    "id": "/blog/graphql#graphql-basics",
+    "title": "GraphQL Basics",
+    "text": "GraphQL is a query language for your API that allows clients to request only the data they need...",
+    "titles": ["GraphQL", "GraphQL Basics"]
+  },
+  {
+    "id": "/blog/graphql#queries-and-mutations",
+    "title": "Queries and Mutations",
+    "text": "Queries and mutations are the two main types of operations in GraphQL...",
+    "titles": ["GraphQL", "Queries and Mutations"]
+  },
+  {
+    "id": "/blog/graphql#subscriptions",
+    "title": "Subscriptions",
+    "text": "Subscriptions in GraphQL allow clients to receive real-time updates...",
+    "titles": ["GraphQL", "Subscriptions"]
   }
 ]

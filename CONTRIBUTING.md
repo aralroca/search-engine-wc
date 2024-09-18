@@ -5,6 +5,12 @@ email, or any other method with the owners of this repository before making a ch
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
+Good to know:
+
+1. The code is inside `src/web-components/search-engine-wc.tsx`, the other files from `src` is for the demo.
+2. `bun run build` do the build of both (demo + web component).
+3. `bun dev` you can preview the WC inside the demo on https://localhost:3000.
+
 ## Pull Request Process
 
 1. Ensure you are doing the PR to the canary branch.

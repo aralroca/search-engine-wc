@@ -236,6 +236,10 @@ export default async function SearchEngineWC(
         padding: 16px 8px;
         border-radius: 0;
 
+        ul {
+          max-height: min(100vh - 100px, 900px);
+        }
+
         input[type="search"] {
           padding-left: 40px;
         }
