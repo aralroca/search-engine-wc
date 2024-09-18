@@ -189,6 +189,13 @@ To work properly you have to provide a JSON with all the sections of your pages.
 ]
 ```
 
+## Notes for Contributors
+
+Good to know:
+
+1. The code is inside `src/web-components/search-engine-wc.tsx`, the other files from `src` is for the demo.
+2. `bun run build` do the build of both (demo + web component).
+3. `bun dev` you can preview the WC inside the demo on https://localhost:3000.
 
 ## License
 
