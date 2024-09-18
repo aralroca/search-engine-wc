@@ -96,7 +96,7 @@ Then import it in your `src/web-components/_integrations.ts` file:
 import type { WebComponentIntegrations } from "brisa";
 
 export default {
-  "custom-counter": {
+  "search-engine-wc": {
     client: "search-engine-wc",
     server: "search-engine-wc/server",
     types: "search-engine-wc/types",
