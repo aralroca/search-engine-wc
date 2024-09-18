@@ -49,7 +49,6 @@ Add these scripts into your `<head>`:
     }
 </script>
 <script type="module" src="https://unpkg.com/search-engine-wc@latest"></script>
-</head>
 ```
 
 Alternatively, you can install it via npm:
