@@ -1,5 +1,8 @@
 # `search-engine-wc`
 
+<div align="center">
+
+
 <a href="https://brisa.build" target="_blank" rel="noopener noreferrer">
   <img
     width="150"
@@ -8,6 +11,14 @@
     alt="Made with Brisa"
   />
 </a>
+
+
+[![npm version](https://badge.fury.io/js/brisa.svg)](https://badge.fury.io/js/search-engine-wc)
+![npm](https://img.shields.io/npm/dw/search-engine-wc)
+[![size](https://img.shields.io/bundlephobia/minzip/search-engine-wc)](https://bundlephobia.com/package/brisa)
+
+</div>
+
 
 This Web Component allows you to have a **search engine** similar to **Vitepress** easily in any framework _(React, Brisa, Vue, Solid.js, Svelte, Vanilla JS, etc)_.
 
