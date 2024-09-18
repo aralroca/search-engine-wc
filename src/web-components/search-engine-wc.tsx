@@ -29,7 +29,7 @@ export default async function SearchEngineWC(
   function onKeyDown(event: KeyboardEvent) {
     if (event.key === "Escape") {
       event.preventDefault();
-      isExpanded.value = false;
+      close();
       return;
     }
 
@@ -58,19 +58,20 @@ export default async function SearchEngineWC(
       const result = searchResults.value[selected.value];
       if (result) {
         event.preventDefault();
-        isExpanded.value = false;
-        document.body.style.overflow = "auto";
+        close();
         navigate(result.id);
       }
       return;
     }
   }
 
+  function close() {
+    isExpanded.value = false;
+    document.body.style.overflow = "auto";
+  }
+
   async function loadSearchModal() {
-    if (!isExpanded.value) {
-      document.body.style.overflow = "auto";
-      return;
-    }
+    if (!isExpanded.value) return;
 
     if (!instance) {
       instance = new Mark(
@@ -297,7 +298,7 @@ export default async function SearchEngineWC(
       <div
         onClick={(e) => {
           if ((e.target as HTMLElement)?.tagName !== "INPUT") {
-            isExpanded.value = false;
+            close();
           }
         }}
         style={{
