@@ -1,9 +1,9 @@
 {
   "name": "search-engine-wc",
-  "version": "0.1.1",
-  "module": "dist/search-engine-wc.client.js",
+  "version": "0.1.2",
+  "module": "dist/web-components/search-engine-wc.client.js",
   "type": "module",
-  "main": "./dist/search-engine-wc.client.js",
+  "main": "./dist/web-components/search-engine-wc.client.js",
   "types": "./index.d.ts",
   "description": "Web component to search content in different pages",
   "repository": {
@@ -18,7 +18,7 @@
   "scripts": {
     "dev": "brisa dev",
     "dev:debug": "brisa dev --debug",
-    "build": "brisa build -w src/web-components/search-engine-wc.tsx && mv build dist && brisa build",
+    "build": "rm -rf dist build && brisa build -w src/web-components/search-engine-wc.tsx && mv build dist && brisa build",
     "start": "brisa start"
   },
   "files": [
@@ -27,16 +27,16 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/search-engine-wc.client.js",
-      "require": "./dist/search-engine-wc.client.js",
-      "bun": "./dist/search-engine-wc.client.js",
-      "node": "./dist/search-engine-wc.client.js"
+      "import": "./dist/web-components/search-engine-wc.client.js",
+      "require": "./dist/web-components/search-engine-wc.client.js",
+      "bun": "./dist/web-components/search-engine-wc.client.js",
+      "node": "./dist/web-components/search-engine-wc.client.js"
     },
     "./server": {
-      "import": "./dist/search-engine-wc.server.js",
-      "require": "./dist/search-engine-wc.server.js",
-      "bun": "./dist/search-engine-wc.server.js",
-      "node": "./dist/search-engine-wc.server.js"
+      "import": "./dist/web-components/search-engine-wc.server.js",
+      "require": "./dist/web-components/search-engine-wc.server.js",
+      "bun": "./dist/web-components/search-engine-wc.server.js",
+      "node": "./dist/web-components/search-engine-wc.server.js"
     },
     "./types": {
       "import": "./index.d.ts",
