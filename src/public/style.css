@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-image: linear-gradient(to right, rgb(69 177 228), rgb(4 14 113));
+  background-image: linear-gradient(to right, rgb(96, 156, 106), rgb(35, 113, 4));
   position: fixed;
   max-width: 100vw;
   gap: 20px;
