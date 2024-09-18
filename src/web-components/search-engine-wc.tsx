@@ -166,11 +166,15 @@ export default async function SearchEngineWC(
       li:has(a) {
         border: 2px solid #e2e2e3;
         border-radius: 4px;
-        padding: 8px;
         list-style: none;
         display: flex;
         align-items: center;
         gap: 8px;
+
+        a {
+          padding: 8px;
+          width: 100%;
+        }
       }
 
       li:has(a[aria-current="true"]) {
