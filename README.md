@@ -2,7 +2,6 @@
 
 <div align="center">
 
-
 <a href="https://brisa.build" target="_blank" rel="noopener noreferrer">
   <img
     width="150"
@@ -12,13 +11,11 @@
   />
 </a>
 
-
 [![npm version](https://badge.fury.io/js/search-engine-wc.svg)](https://badge.fury.io/js/search-engine-wc)
 ![npm](https://img.shields.io/npm/dw/search-engine-wc)
 [![size](https://img.shields.io/bundlephobia/minzip/search-engine-wc)](https://bundlephobia.com/package/brisa)
 
 </div>
-
 
 This Web Component allows you to have a **search engine** similar to **Vitepress** easily in any framework _(React, Brisa, Vue, Solid.js, Svelte, Vanilla JS, etc)_.
 
@@ -33,7 +30,6 @@ Includes:
 
 <img width="800" height="404" src="demo.gif" />
 
-
 ## Getting Started
 
 ### In any framework except Brisa
@@ -42,11 +38,11 @@ Add these scripts into your `<head>`:
 
 ```html
 <script type="importmap">
-    {
+  {
     "imports": {
-        "brisa/client": "https://unpkg.com/brisa@latest/client-simplified/index.js"
+      "brisa/client": "https://unpkg.com/brisa@latest/client-simplified/index.js"
     }
-    }
+  }
 </script>
 <script type="module" src="https://unpkg.com/search-engine-wc@latest"></script>
 ```
@@ -60,7 +56,7 @@ npm install search-engine-wc
 And then import it in your code:
 
 ```js
-import 'search-engine-wc';
+import "search-engine-wc";
 ```
 
 > [!NOTE]
@@ -187,6 +183,22 @@ To work properly you have to provide a JSON with all the sections of your pages.
     "titles": ["Advanced JavaScript", "Closures"]
   }
 ]
+```
+
+## Props
+
+- `jsonUrl`: The URL of the JSON file with all the sections of your pages.
+- `color`: The color of the search engine. (Default: `#07645A`)
+- `maxResults`: The maximum number of results to show. (Default: `15`)
+
+## Types
+
+```ts
+export default function SearchEngineWC(props: {
+  jsonUrl: string;
+  color?: string;
+  maxResults?: number;
+}): JSX.Element;
 ```
 
 ## Notes for Contributors

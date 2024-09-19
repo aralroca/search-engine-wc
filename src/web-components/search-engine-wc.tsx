@@ -14,7 +14,11 @@ const miniSearch = new MiniSearch({
 });
 
 export default async function SearchEngineWC(
-  { jsonUrl, color = "#07645A" }: { jsonUrl: string; color?: string },
+  {
+    jsonUrl,
+    color = "#07645A",
+    maxResults = 15,
+  }: { jsonUrl: string; color?: string; maxResults?: number },
   { state, cleanup, effect, css, self }: WebContext,
 ) {
   const inputRef = state<HTMLInputElement | null>(null);
@@ -324,13 +328,13 @@ export default async function SearchEngineWC(
             placeholder="Search"
             autoFocus
             ref={inputRef}
-            onInput={(e) => {
+            onInput={async (e) => {
               const value = (e.target as HTMLInputElement).value;
-              const results = miniSearch.search(value);
-              const terms = results.flatMap((r) => r.terms);
+              const results = miniSearch.search(value).slice(0, maxResults);
               searchResults.value = results;
               selected.value = 0;
-              instance.mark(terms);
+              const terms = results.flatMap((r) => r.terms);
+              requestIdleCallback(() => instance.mark(terms));
             }}
             tabIndex={0}
           />
