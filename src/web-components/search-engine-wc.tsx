@@ -163,7 +163,7 @@ export default async function SearchEngineWC(
         flex-direction: column;
         gap: 6px;
         overflow-y: auto;
-        max-height: min(100vh - 208px, 900px);
+        max-height: min(100vh - 258px, 900px);
         overscroll-behavior: contain;
       }
 
