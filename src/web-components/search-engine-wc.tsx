@@ -118,7 +118,7 @@ export default async function SearchEngineWC(
   css`
     .search-modal-container, .open-search {
       --color: var(--search-engine-color, #07645A);
-      --color-light: oklch(from var(--color) calc(l + .4) c  h);
+      --color-light: light-dark(oklch(from var(--color) calc(l + .4) c  h), oklch(from var(--color) calc(l / 5) calc(c * 3)  h))
     }
 
     .open-search {
