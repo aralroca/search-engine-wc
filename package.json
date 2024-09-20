@@ -1,6 +1,6 @@
 {
   "name": "search-engine-wc",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "module": "dist/web-components/search-engine-wc.client.js",
   "type": "module",
   "main": "./dist/web-components/search-engine-wc.client.js",
