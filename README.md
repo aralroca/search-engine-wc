@@ -188,15 +188,24 @@ To work properly you have to provide a JSON with all the sections of your pages.
 ## Props
 
 - `jsonUrl`: The URL of the JSON file with all the sections of your pages.
-- `color`: The color of the search engine. (Default: `#07645A`)
 - `maxResults`: The maximum number of results to show. (Default: `15`)
+
+## CSS Variables
+
+```css
+--search-engine-color: #07645a
+  /* The color of the text (borders are derived colors from this) */;
+```
+
+> [!NOTE]
+>
+> Dark mode is supported by default with the `color-scheme` css property (`light` / `dark`).
 
 ## Types
 
 ```ts
 export default function SearchEngineWC(props: {
   jsonUrl: string;
-  color?: string;
   maxResults?: number;
 }): JSX.Element;
 ```

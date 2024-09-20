@@ -14,11 +14,7 @@ const miniSearch = new MiniSearch({
 });
 
 export default async function SearchEngineWC(
-  {
-    jsonUrl,
-    color = "#07645A",
-    maxResults = 15,
-  }: { jsonUrl: string; color?: string; maxResults?: number },
+  { jsonUrl, maxResults = 15 }: { jsonUrl: string; maxResults?: number },
   { state, cleanup, effect, css, self }: WebContext,
 ) {
   const inputRef = state<HTMLInputElement | null>(null);
@@ -29,6 +25,12 @@ export default async function SearchEngineWC(
   const metaKey = isMac ? "⌘+" : "Ctrl+";
   const minSearchWidth = isMac ? "80px" : "100px";
   let instance: Mark;
+
+  function onClick(e: MouseEvent) {
+    if ((e.target as HTMLElement)?.tagName !== "INPUT") {
+      close();
+    }
+  }
 
   function onKeyDown(event: KeyboardEvent) {
     if (event.key === "Escape") {
@@ -65,7 +67,6 @@ export default async function SearchEngineWC(
         close();
         navigate(result.id);
       }
-      return;
     }
   }
 
@@ -116,7 +117,7 @@ export default async function SearchEngineWC(
 
   css`
     .search-modal-container, .open-search {
-      --color: ${color};
+      --color: var(--search-engine-color, #07645A);
       --color-light: oklch(from var(--color) calc(l + .4) c  h);
     }
 
@@ -129,11 +130,24 @@ export default async function SearchEngineWC(
         padding: 10px;
         border-radius: 9999px;
         border: 1px solid var(--color-light);
-        background-color: #fff;
+        background-color: light-dark(white, #212121);
         color: var(--color);
         outline: none;
         width: ${minSearchWidth};,
       }
+    }
+
+    .ctrlk {
+        z-index: 1;
+        background: light-dark(white, #212121);
+        border: 1px solid var(--color-light);
+        padding: 5px;
+        border-radius: 8px;
+        pointer-events: none;
+        position: absolute;
+        left: 32px;
+        color: var(--color);
+        display: block;
     }
 
     .search-modal-container {
@@ -143,7 +157,7 @@ export default async function SearchEngineWC(
       transform: translateX(-50%);
       width: 50%;
       max-width: 900px;
-      background-color: #fff;
+      background-color: light-dark(white, #212121);
       border-radius: 8px;
       padding: 16px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -151,7 +165,7 @@ export default async function SearchEngineWC(
       input[type="search"] {
         padding: 8px 8px 8px 30px;
         border: 1px solid var(--color-light);
-        background-color: #fff;
+        background-color: light-dark(white, #212121);
         color: var(--color);
         outline: none;
         width: 100%;
@@ -168,7 +182,7 @@ export default async function SearchEngineWC(
       }
 
       li:has(a) {
-        border: 2px solid #e2e2e3;
+        border: 2px solid light-dark(#e2e2e3, #3d3d3d);
         border-radius: 4px;
         list-style: none;
         display: flex;
@@ -201,7 +215,7 @@ export default async function SearchEngineWC(
     }
 
     .title-icon {
-      color: #080426;
+      color: light-dark(#080426, #f6f8fa);
       opacity: 0.5;
       font-weight: 500;
     }
@@ -213,7 +227,7 @@ export default async function SearchEngineWC(
 
     mark {
       background: var(--color);
-      color: white;
+      color: light-dark(white, #212121);
     }
 
     .search-keyboard-shortcuts {
@@ -223,9 +237,10 @@ export default async function SearchEngineWC(
       gap: 16px;
       margin-top: 16px;
       font-size: 0.8rem;
+      color: light-dark(#115e59, #f6f8fa);
 
       kbd {
-        background: #f6f8fa;
+        background: light-dark(#f6f8fa, #115e59);
         border: 1px solid var(--color-light);
         padding: 5px;
         margin: 0 4px;
@@ -285,30 +300,11 @@ export default async function SearchEngineWC(
             position: "absolute",
             left: "10px",
           })}
-          <kbd
-            style={{
-              zIndex: 1,
-              background: "white",
-              border: "1px solid var(--color-light)",
-              padding: "5px",
-              borderRadius: "8px",
-              pointerEvents: "none",
-              position: "absolute",
-              left: "32px",
-              color,
-              display: "block",
-            }}
-          >
-            {metaKey}K
-          </kbd>
+          <kbd class="ctrlk">{metaKey}K</kbd>
         </div>
       </div>
       <div
-        onClick={(e) => {
-          if ((e.target as HTMLElement)?.tagName !== "INPUT") {
-            close();
-          }
-        }}
+        onClick={onClick}
         style={{
           position: "absolute",
           top: "0",
@@ -316,7 +312,7 @@ export default async function SearchEngineWC(
           display: isExpanded.value ? "block" : "none",
           zIndex: 1000,
           width: "100vw",
-          color,
+          color: "var(--color)",
           height: "100vh",
           cursor: "pointer",
           backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -352,17 +348,18 @@ export default async function SearchEngineWC(
               </li>
             )}
             {searchResults.value.map((result, i) => (
-              <li onMouseOver={() => (selected.value = i)}>
+              <li key={result.id}>
                 <a
                   href={result.id}
+                  onMouseOver={() => (selected.value = i)}
                   onFocus={() => (selected.value = i)}
-                  aria-current={selected.value === i ? true : false}
+                  aria-current={selected.value === i}
                   aria-label={[...result.titles, result.title].join(" > ")}
                 >
                   <div class="titles">
                     <span class="title-icon">#</span>
                     {result.titles.map((t: string, index: number) => (
-                      <span key={index} class="title">
+                      <span key={t + index} class="title">
                         <span class="text">{t}</span>
                         {arrowIcon({ direction: "right" })}
                       </span>

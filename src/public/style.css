@@ -1,4 +1,3 @@
-/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +18,6 @@ header {
     rgb(35, 113, 4)
   );
   position: fixed;
-  max-width: 100vw;
   gap: 20px;
   display: flex;
   align-items: center;
