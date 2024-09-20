@@ -240,7 +240,7 @@ export default async function SearchEngineWC(
       color: light-dark(#115e59, #f6f8fa);
 
       kbd {
-        background: light-dark(#f6f8fa, #115e59);
+        background: light-dark(#f6f8fa, #1d2c2b);
         border: 1px solid var(--color-light);
         padding: 5px;
         margin: 0 4px;
