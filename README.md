@@ -6,7 +6,7 @@
   <img
     width="150"
     height="42"
-    src="https://brisa.build/assets/brisa_badge.svg"
+    src="https://brisa.build/images/brisa_badge.svg"
     alt="Made with Brisa"
   />
 </a>
